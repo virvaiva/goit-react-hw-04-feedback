@@ -15,25 +15,17 @@ export const App = () => {
     const percentage = (good * 100) / total;
     return Math.round(percentage);
   };
-  const addGood = () => {
-    setGood(good + 1);
-  };
-  const addNeutral = () => {
-    setNeutral(neutral + 1);
-  };
-  const addBad = () => {
-    setBad(bad + 1);
-  };
+
   const handleFeedback = event => {
     switch (event) {
       case 'good':
-        addGood();
+        setGood(good + 1);
         break;
       case 'neutral':
-        addNeutral();
+        setNeutral(neutral + 1);
         break;
       case 'bad':
-        addBad();
+        setBad(bad + 1);
         break;
       default:
         return;
